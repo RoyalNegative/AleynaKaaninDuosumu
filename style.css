@@ -1,0 +1,85 @@
+body {
+    background: #111;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.soru {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.al {
+    color: #ff4444;
+    animation: yanSondeKirmizi 1.2s infinite alternate;
+}
+.ka {
+    color: #448aff;
+    animation: yanSondeMavi 1.2s infinite alternate;
+}
+@keyframes yanSondeKirmizi {
+    from { text-shadow: 0 0 5px #ff4444, 0 0 10px #ff4444; }
+    to   { text-shadow: 0 0 20px #ff4444, 0 0 40px #ff4444; }
+}
+@keyframes yanSondeMavi {
+    from { text-shadow: 0 0 5px #448aff, 0 0 10px #448aff; }
+    to   { text-shadow: 0 0 20px #448aff, 0 0 40px #448aff; }
+}
+.butonlar {
+    display: flex;
+    gap: 30px;
+}
+button {
+    padding: 16px 36px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #222;
+    color: #fff;
+    transition: background 0.2s, transform 0.2s;
+}
+#evet:hover {
+    background: #44ff44;
+    color: #111;
+}
+#hayir {
+    background: #ffbb33;
+    color: #111;
+    position: absolute;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+}
+.modal-icerik {
+    background: #222;
+    padding: 30px 40px;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+}
+.kapat {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+.video-container {
+    margin-top: 20px;
+}
